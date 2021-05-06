@@ -2,9 +2,9 @@ class Jrctl < Formula
 
 	desc "Command line tool to help interact with our API"
 	homepage "https://github.com/jetrails/jrctl"
-	url "https://github.com/jetrails/jrctl/releases/download/2.0.0/jrctl-2.0.0-darwin.tar.gz"
-	sha256 "1029c00caf3a8bde30b642851126281d0c4a51a8f8aa7af2e6b7b21d8da27f7c"
-	version "2.0.0"
+	url "https://github.com/jetrails/jrctl/releases/download/2.1.0/jrctl-2.1.0-darwin.tar.gz"
+	sha256 "ecd716efb40f4ca284a0223e8dd0c1d9e9df180487d3e1fabe5814bf5a26faa4"
+	version "2.1.0"
 
 	def install
 		bin.install "bin/jrctl_darwin_amd64" => "jrctl"
@@ -23,21 +23,18 @@ class Jrctl < Formula
 		man1.install "man/jrctl-server-ingest.1"
 		man1.install "man/jrctl-server-list.1"
 		man1.install "man/jrctl-server-restart.1"
+		man1.install "man/jrctl-server-token.1"
 		man1.install "man/jrctl-server-version.1"
 		man1.install "man/jrctl-server.1"
 		man1.install "man/jrctl-transfer-receive.1"
 		man1.install "man/jrctl-transfer-send.1"
 		man1.install "man/jrctl-transfer.1"
 		man1.install "man/jrctl.1"
+		system "#{bin}/jrctl completion bash > /usr/local/etc/bash_completion.d/jrctl"
 	end
 
 	test do
 		system "#{bin}/jrctl", "-v"
-	end
-
-	def caveats
-		"Bash completions are available but were not installed. For more info see:\n\n" +
-		"    $ jrctl completion --help\n\n"
 	end
 
 end
