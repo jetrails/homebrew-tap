@@ -2,9 +2,9 @@ class Jrctl < Formula
 
 	desc "Command line tool to help interact with our API"
 	homepage "https://github.com/jetrails/jrctl"
-	url "https://github.com/jetrails/jrctl/releases/download/2.1.2/jrctl-2.1.2-darwin.tar.gz"
-	sha256 "60ac9615fc9f6295ac5a40e28b13adb475b0dbdd302501968adfd5674dd33ca9"
-	version "2.1.2"
+	url "https://github.com/jetrails/jrctl/releases/download/2.1.3/jrctl-2.1.3-darwin.tar.gz"
+	sha256 "2e7d31003119bbb2dda1bf1a3373f04c9b74599ba0146cb03d31dfafd23d2849"
+	version "2.1.3"
 
 	def install
 		bin.install "bin/jrctl_darwin_amd64" => "jrctl"
