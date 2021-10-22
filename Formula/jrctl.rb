@@ -2,9 +2,9 @@ class Jrctl < Formula
 
 	desc "Command line tool to help interact with our API"
 	homepage "https://github.com/jetrails/jrctl"
-	url "https://github.com/jetrails/jrctl/releases/download/2.1.3/jrctl-2.1.3-darwin.tar.gz"
-	sha256 "2e7d31003119bbb2dda1bf1a3373f04c9b74599ba0146cb03d31dfafd23d2849"
-	version "2.1.3"
+	url "https://github.com/jetrails/jrctl/releases/download/2.1.4/jrctl-2.1.4-darwin.tar.gz"
+	sha256 "8ceb6ad4a827096e6488809fb590e7403b5200039db62118e8dd8d3c6caccf0c"
+	version "2.1.4"
 
 	def install
 		bin.install "bin/jrctl_darwin_amd64" => "jrctl"
@@ -29,6 +29,7 @@ class Jrctl < Formula
 		man1.install "man/jrctl-transfer-receive.1"
 		man1.install "man/jrctl-transfer-send.1"
 		man1.install "man/jrctl-transfer.1"
+		man1.install "man/jrctl-update.1"
 		man1.install "man/jrctl.1"
 		system "#{bin}/jrctl completion bash > /usr/local/etc/bash_completion.d/jrctl"
 	end
