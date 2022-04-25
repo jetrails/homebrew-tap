@@ -2,9 +2,9 @@ class Jrctl < Formula
 
 	desc "Command line tool to help interact with our API"
 	homepage "https://github.com/jetrails/jrctl"
-	url "https://github.com/jetrails/jrctl/releases/download/2.3.1/jrctl_2.3.1_darwin_amd64.tar.gz"
-	sha256 "db035d388fddc521b3f5c06021ed1f30c51871b9c327d9327495baf0254c7570"
-	version "2.3.1"
+	url "https://github.com/jetrails/jrctl/releases/download/2.5.0/jrctl_2.5.0_darwin_amd64.tar.gz"
+	sha256 "89ca921902063619cb124c00444f548cd9b191f3032fa2cd62355f8ff6d4fb7e"
+	version "2.5.0"
 
 	def install
 		bin.install "bin/jrctl_darwin_amd64" => "jrctl"
@@ -16,6 +16,8 @@ class Jrctl < Formula
 		man1.install "man/jrctl-firewall-unallow.1"
 		man1.install "man/jrctl-firewall-undeny.1"
 		man1.install "man/jrctl-firewall.1"
+		man1.install "man/jrctl-report-audit.1"
+		man1.install "man/jrctl-report.1"
 		man1.install "man/jrctl-secret-create.1"
 		man1.install "man/jrctl-secret-delete.1"
 		man1.install "man/jrctl-secret-read.1"
