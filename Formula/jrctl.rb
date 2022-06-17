@@ -2,9 +2,9 @@ class Jrctl < Formula
 
 	desc "Command line tool to help interact with our API"
 	homepage "https://github.com/jetrails/jrctl"
-	url "https://github.com/jetrails/jrctl/releases/download/3.0.0/jrctl_3.0.0_darwin_amd64.tar.gz"
-	sha256 "6222a8436db872cdd2182a08abafd5dec2858c600f9252cba4b471a869c4efcf"
-	version "3.0.0"
+	url "https://github.com/jetrails/jrctl/releases/download/3.0.1/jrctl_3.0.1_darwin_amd64.tar.gz"
+	sha256 "4054bf12acc311e3c6878d713332293b7532a9fc0f551457239197a4a31276e2"
+	version "3.0.1"
 
 	def install
 		bin.install "bin/jrctl_darwin_amd64" => "jrctl"
@@ -48,7 +48,8 @@ class Jrctl < Formula
 		man1.install "man/jrctl-utility.1"
 		man1.install "man/jrctl-version.1"
 		man1.install "man/jrctl-website-list.1"
-		man1.install "man/jrctl-website-switch-php.1"
+		man1.install "man/jrctl-website-php-available.1"
+		man1.install "man/jrctl-website-php-switch.1"
 		man1.install "man/jrctl-website.1"
 		man1.install "man/jrctl.1"
 		system "#{bin}/jrctl completion bash > /usr/local/etc/bash_completion.d/jrctl"
