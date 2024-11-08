@@ -24,3 +24,4 @@ brew tap jetrails/tap
 |  Formula |           Install           |
 |:--------:|:---------------------------:|
 | magerepo | ```brew install magerepo``` |
+| jrctl    | ```brew install jrctl```    |
