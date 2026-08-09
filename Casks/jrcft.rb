@@ -30,11 +30,11 @@ cask "jrcft" do
     end
   end
 
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     on_intel do
-      sha256 "87dca76288e49a8fce63c7f0429fef8b43d375e4396cba147d154248162e6630"
+      sha256 "e1e5214ee3441293feeb0a24fad27e0e18a2ceee44d23d0169916c085925f366"
       url "#{GitHubHelper.release_asset_url("#{version}", "jrcft_#{version}_darwin_amd64.tar.gz")}",
         header: [
           "Accept: application/octet-stream",
@@ -43,7 +43,7 @@ cask "jrcft" do
         ]
     end
     on_arm do
-      sha256 "a00c0ed74892c8955e8c22cf235db3fe55f0adde5f48bb1b3b470cc2c7e83546"
+      sha256 "9abec878b138a49831d38c189db8cc431aa822364767f91f64e232d399cdf3e3"
       url "#{GitHubHelper.release_asset_url("#{version}", "jrcft_#{version}_darwin_arm64.tar.gz")}",
         header: [
           "Accept: application/octet-stream",
@@ -55,7 +55,7 @@ cask "jrcft" do
 
   on_linux do
     on_intel do
-      sha256 "c1437600f7a2f4d7a2b2678c1a16d4f0dbc3c9b914c3fa255a73872703230659"
+      sha256 "44580d180733ee9b591aef31a0785d02e0bd669b71f4338feaef3c089832fed7"
       url "#{GitHubHelper.release_asset_url("#{version}", "jrcft_#{version}_linux_amd64.tar.gz")}",
         header: [
           "Accept: application/octet-stream",
@@ -64,7 +64,7 @@ cask "jrcft" do
         ]
     end
     on_arm do
-      sha256 "fb8af5dfcda0ce5769c34f6a4f7b6d6f360780bd329540c638430637d108b007"
+      sha256 "9c0c12b26ff49083e45c765360db2925bc8d0e0ae6b8e52c39b7f80be75886b5"
       url "#{GitHubHelper.release_asset_url("#{version}", "jrcft_#{version}_linux_arm64.tar.gz")}",
         header: [
           "Accept: application/octet-stream",
