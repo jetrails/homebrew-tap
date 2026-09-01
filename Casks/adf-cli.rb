@@ -30,20 +30,11 @@ cask "adf-cli" do
     end
   end
 
-  version "0.0.12"
+  version "0.0.13"
 
   on_macos do
-    on_intel do
-      sha256 "3e7af19ffb7e13f2f85308aa80613ec838b78e5caefa41fdf4d6237d068bf397"
-      url "#{GitHubHelper.release_asset_url("#{version}", "adf-cli_#{version}_darwin_amd64.tar.gz")}",
-        header: [
-          "Accept: application/octet-stream",
-          "Authorization: Bearer #{GitHubHelper.token}",
-          "X-GitHub-Api-Version: 2022-11-28",
-        ]
-    end
     on_arm do
-      sha256 "5b754be0b9cd68534e0371ebc6e2a400ec137d1adf37916fb47d141eaebe76a5"
+      sha256 "3fad9cf5d9598bc0452a366562ea7932038dc3093f48b6dd33f8a45b90147785"
       url "#{GitHubHelper.release_asset_url("#{version}", "adf-cli_#{version}_darwin_arm64.tar.gz")}",
         header: [
           "Accept: application/octet-stream",
@@ -51,21 +42,29 @@ cask "adf-cli" do
           "X-GitHub-Api-Version: 2022-11-28",
         ]
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "3e2a4cfacb41377eb69412cbc6f67bdfeada23944fe9a11bd84a185caddcc6a2"
-      url "#{GitHubHelper.release_asset_url("#{version}", "adf-cli_#{version}_linux_amd64.tar.gz")}",
+      sha256 "0f6a253973ea8c159f9e512c26e46b5d7a5bc932e6fe97b68837332e25f2d1e9"
+      url "#{GitHubHelper.release_asset_url("#{version}", "adf-cli_#{version}_darwin_amd64.tar.gz")}",
         header: [
           "Accept: application/octet-stream",
           "Authorization: Bearer #{GitHubHelper.token}",
           "X-GitHub-Api-Version: 2022-11-28",
         ]
     end
+  end
+  on_linux do
     on_arm do
-      sha256 "05b6879426a134504a89eb279967f61f87672d859c8ef2ed2447102ce227fa9b"
+      sha256 "7b9256bcdffc63be242dc3497a8bdd20465913f9dbc24e0a646f03b93b4fc178"
       url "#{GitHubHelper.release_asset_url("#{version}", "adf-cli_#{version}_linux_arm64.tar.gz")}",
+        header: [
+          "Accept: application/octet-stream",
+          "Authorization: Bearer #{GitHubHelper.token}",
+          "X-GitHub-Api-Version: 2022-11-28",
+        ]
+    end
+    on_intel do
+      sha256 "e861a8b2f96ae932d58e4506c08fdb3d95295568ed9403bf427c22bdbf33f01f"
+      url "#{GitHubHelper.release_asset_url("#{version}", "adf-cli_#{version}_linux_amd64.tar.gz")}",
         header: [
           "Accept: application/octet-stream",
           "Authorization: Bearer #{GitHubHelper.token}",
@@ -88,5 +87,4 @@ cask "adf-cli" do
   zsh_completion "./completions/_adf"
 
   # No zap stanza required
-
 end
