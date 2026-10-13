@@ -30,11 +30,11 @@ cask "adf-cli" do
     end
   end
 
-  version "0.0.15"
+  version "0.0.16"
 
   on_macos do
     on_arm do
-      sha256 "cd2ce7b082714a4a9d9b05024745d187130b965b35215dc43c359b73404dd8db"
+      sha256 "b4852862814aec55a3eb4ec6d53f753e35793987e59d6ba9433cbec33ad50767"
       url "#{GitHubHelper.release_asset_url("#{version}", "adf-cli_#{version}_darwin_arm64.tar.gz")}",
         header: [
           "Accept: application/octet-stream",
@@ -43,7 +43,7 @@ cask "adf-cli" do
         ]
     end
     on_intel do
-      sha256 "d439c0eab42a5b499ccbf8cc41418a33faa6b3e697c38334bafac876749b1575"
+      sha256 "2ebe0d84222a3a7190e115643dae47dbd95e8dc19ee6193720c938ba19cf052a"
       url "#{GitHubHelper.release_asset_url("#{version}", "adf-cli_#{version}_darwin_amd64.tar.gz")}",
         header: [
           "Accept: application/octet-stream",
@@ -54,7 +54,7 @@ cask "adf-cli" do
   end
   on_linux do
     on_arm do
-      sha256 "be52aab70465f1eb6147bc45e4570e2b39738335515d2374fe2c594c26f79054"
+      sha256 "fd2fc46201bee7a6878e9bfb697b1f2ad9eaf6fa1562f69462f458e0f941d049"
       url "#{GitHubHelper.release_asset_url("#{version}", "adf-cli_#{version}_linux_arm64.tar.gz")}",
         header: [
           "Accept: application/octet-stream",
@@ -63,7 +63,7 @@ cask "adf-cli" do
         ]
     end
     on_intel do
-      sha256 "2de6c670945ef81a72e5efc0f3d96b08d975fd73ad5d64b31427aeb0540be581"
+      sha256 "0c06eee162da21ba26580afb2fa5c9e7b4bf35102c384fb0ed81e69383fde7fc"
       url "#{GitHubHelper.release_asset_url("#{version}", "adf-cli_#{version}_linux_amd64.tar.gz")}",
         header: [
           "Accept: application/octet-stream",
